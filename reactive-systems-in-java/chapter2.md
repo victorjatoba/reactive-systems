@@ -22,3 +22,17 @@
 - To expose the Docker daemon from minikube to the local terminal environment: `eval $(minikube -p minikube docker-env)`
 - `mvn verify -D quarkus.kubernetes.deploy=true`
 
+### Service
+
+- Is a channel of communication delegating to a set of pods
+- This service delegates the port 8080 on pods with matching labels (app.kubernetes.io/name and app.kubernetes.io/version)
+- How to know the service URL: `minikube service code-with-quarkus --url`
+
+### Check Pod's memory
+
+- `kubectl top pods`
+
+## Go Native
+
+- GraalVM generates native application from Java code
+- GraalVM puts static initialization in build process
